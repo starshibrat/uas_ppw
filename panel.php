@@ -22,6 +22,10 @@ $checkUserResult = $conn->query($checkUserQuery);
 </head>
 
 <body>
+    <div class="admin-add">
+        <a href="admin_add_form.php"><button>Add new User</button></a>
+    </div>
+
     <table class="user-list">
         <tr>
             <th>User</th>
@@ -41,12 +45,12 @@ $checkUserResult = $conn->query($checkUserQuery);
             <input type='hidden' name='user_id' value=$id>
             <button type='submit'>Modify</button>
             </form><br>";
-            
+
             echo "<form action='admin_delete.php' method='post'>
             <input type='hidden' name='user_id' value=$id>
             <button type='submit'>Delete</button>
             </form>";
-            
+
             echo "</td>";
 
             echo "</tr>";

@@ -31,6 +31,7 @@ $id = $row[0];
 </head>
 
 <body>
+    <a href="panel.php">Back to admin panel</a>
     <div class="modify-form">
         <form method="post" action="admin_update.php">
             <input type='hidden' name="id" value=<?php echo $id; ?>>
