@@ -1,0 +1,150 @@
+/* Dark Theme Styles */
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #333;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+header {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="text"]::placeholder {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1px solid #aaf;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.input-field input[type="text"]:focus ~ label,
+.input-field input[type="password"]:focus ~ label,
+.input-field input[type="text"]:valid ~ label,
+.input-field input[type="password"]:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #aaf;
+}
+
+.captcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.captcha-content {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #333;
+    margin-right: 10px;
+}
+
+.captcha-content,
+.captcha-answer input[type="text"] {
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    text-align: center;
+    width: 70px;
+}
+
+.button {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #aaf;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #88ccff;
+}
+
+.auth {
+    color: #aaf;
+    margin-top: 20px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fab {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.signup {
+    color: #fff;
+    margin-top: 20px;
+}
+
+a {
+    color: #aaf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

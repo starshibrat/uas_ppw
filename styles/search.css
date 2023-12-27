@@ -1,0 +1,30 @@
+/* Dark Theme Styles */
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color: #aaf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #88ccff;
+}
+
+h2 {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.user-result,
+.post-result {
+    margin-top: 10px;
+    color: #fff;
+}

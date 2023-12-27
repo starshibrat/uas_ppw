@@ -21,13 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     } else {
         $row = $checkPostResult->fetch_row();
-        $checkReactionQuery = "SELECT * FROM post_reactions WHERE post_id=$post_id";
+        $checkReactionQuery = "SELECT * FROM post_reactions WHERE post_id=$post_id AND love=1";
         $checkReactionResult = $conn->query($checkReactionQuery);
         $number_of_loves = mysqli_num_rows($checkReactionResult);
         $post = [
             "post_id" => $row[0],
             "user_id" => $row[1],
-            "post_text" => $row[2],
+            "content" => $row[2],
             "post_date" => $row[3],
             "loves" => $number_of_loves
 

@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($conn->query($insertQuery) === TRUE) {
             http_response_code(201);
+            echo "<br><a href='../../dashboard.php'>Click here to go to dashboard</a>";
             echo json_encode(array("message" => "Post reacted successfully"));
         } else {
             http_response_code(500);
@@ -35,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($conn->query($updateQuery) === TRUE) {
             http_response_code(201);
+            echo "<br><a href='../../dashboard.php'>Click here to go to dashboard</a>";
             echo json_encode(array("message" => "Post reacted successfully"));
         } else {
             http_response_code(500);
@@ -56,15 +58,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($checkReactionResult->num_rows == 0) {
 
-        echo json_encode(array("lovedthepost" => FALSE));
+        echo 0;
 
     } else {
 
         $row = $checkReactionResult->fetch_row();
         if ($row[3] == 0) {
-            echo json_encode(array("lovedthepost" => FALSE));
+            echo 0;
         } else {
-            echo json_encode(array("lovedthepost" => TRUE));
+            echo 1;
         }
 
 

@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $checkFollowResult = $conn->query($checkFollowQuery);
 
+    echo "<a href='../../dashboard.php'>Back to dashboard</a>";
+
     if ($checkFollowResult->num_rows == 0) {
         $insertFollowQuery = "INSERT INTO follows (follower_id, following_id) VALUES($follower_id, $following_id)";
 

@@ -1,0 +1,179 @@
+/* Reset default margin and padding for elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Dark Theme CSS */
+
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logout-button{
+    background: 0;
+    background-color: rgb(218, 39, 39);
+    border-radius: 20px;
+    color: white;
+    padding: 18px;
+
+}
+
+.profile-sidebar {
+    background-color: #333;
+    padding: 20px;
+    text-align: left;
+    flex: 0 0 25%;
+    /* Sidebar width */
+    margin-bottom: 20px;
+}
+
+.content {
+    background-color: #333;
+    padding: 20px;
+    flex: 0 0 100%;
+    /* Posts content full width */
+    margin-bottom: 20px;
+}
+
+.topnav {
+    background-color: #333;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+.topnav input[type="text"],
+.topnav button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.topnav input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+.topnav button {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.username-sidebar {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.followers,
+.following,
+.bio {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.posts {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Align posts in a column */
+}
+
+.post {
+    background-color: #444;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.post .author-name {
+    color: #aaf;
+    font-weight: bold;
+}
+
+.post .post-content {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.create-post {
+    background-color: #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    /* Full width for "Share your thoughts" box */
+}
+
+.create-post h1 {
+    color: #aaf;
+    margin-bottom: 10px;
+}
+
+.create-post textarea {
+    width: calc(100% - 40px);
+    /* Adjust to fit within the container */
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.create-post textarea::placeholder {
+    color: #ccc;
+}
+
+.create-post button {
+    width: 100%;
+    /* Full width for the button */
+    padding: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #aaf;
+    color: #fff;
+    border: none;
+}
+
+.upvote,
+.downvote {
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+}
+
+.upvote {
+    background-color: #5cb85c;
+}
+
+.downvote {
+    background-color: #d9534f;
+}
+
+.modif-button{
+    background: 0;
+    background-color: #aaf;
+    border-radius: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 18px;
+}

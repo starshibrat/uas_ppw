@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $checkUsernameResult = $conn->query($checkUsernameQuery);
     $checkEmailResult = $conn->query($checkEmailQuery);
 
+    echo '<a href="../../index.php">Click Here to Login</a>';
+
     if ($checkUsernameResult->num_rows > 0){
         http_response_code(400);
         echo json_encode(array("message" => "Username already exists"));
@@ -26,9 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo json_encode(array("message" => "Email already exists"));
     } else {
         $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
-
+        
         if ($conn->query($insertQuery) === TRUE){
             http_response_code(201);
+            
             echo json_encode(array("message" => "User registered successfully"));
         } else {
             http_response_code(500);
